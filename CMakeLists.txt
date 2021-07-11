@@ -1,0 +1,15 @@
+cmake_minimum_required(VERSION 3.16.3)
+project(endecry)
+set(CMAKE_CXX_STANDARD 17)
+add_subdirectory(src)
+
+add_executable(endecry main.cpp)
+
+target_link_libraries(endecry PRIVATE hash)
+target_link_libraries(endecry PRIVATE hex)
+target_link_libraries(endecry PRIVATE md2)
+# target_link_libraries(endecry PRIVATE sha1)
+# target_link_libraries(endecry PRIVATE sha224)
+# target_link_libraries(endecry PRIVATE sha256)
+# target_link_libraries(endecry PRIVATE sha384)
+# target_link_libraries(endecry PRIVATE sha512)
