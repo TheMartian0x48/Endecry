@@ -41,7 +41,11 @@ add_library(
   hash/sha384.cpp 
   hash/sha384.hpp
   )
-# add_library(sha512 sha512.cpp sha512.h)
+add_library(
+  sha512 
+  hash/sha512.cpp 
+  hash/sha512.hpp
+  )
 
 target_include_directories(hash PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/hash")
 target_include_directories(hex PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/hash")
@@ -50,4 +54,4 @@ target_include_directories(sha1 PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/hash")
 target_include_directories(sha224 PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/hash")
 target_include_directories(sha256 PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/hash")
 target_include_directories(sha384 PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/hash")
-# target_include_directories(sha512 PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+target_include_directories(sha512 PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/hash")
